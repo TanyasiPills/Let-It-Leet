@@ -1,16 +1,20 @@
 int lengthOfLongestSubstring(char* s) {
-    int size = sizeof(s);
-    char lastChar = '\0';
-    int count = 0;
-    int top = 0;
-    for (int i = 0; i < size; i++)
+    int characterArray[128] = {0};
+    int lastTime = 0, maxLenght = 0;
+
+    for (int i = 0; s[i] != '\0'; i++)
     {
-        count++;
-        if(lastChar == s[i]){
-            if(count > top) top = count;
-            count = 0;
+        char character = s[i];
+        if(characterArray[character] > lastTime){
+            lastTime = characterArray[character];
         }
-        lastChar = s[i];
+        characterArray[character] = i+1;
+        int lenght = i - lastTime + 1;
+
+        if(lenght > maxLenght){
+            maxLenght = lenght;
+        }
     }
-    return top;
+
+    return maxLenght;
 }
