@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "ios": "c",
+        "xiosbase": "c",
+        "initializer_list": "c",
+        "utility": "c",
+        "xstring": "c",
+        "xutility": "c"
+    }
+}
