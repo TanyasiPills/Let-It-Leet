@@ -1,5 +1,10 @@
 {
     "files.associations": {
-        "(5)longestpalindromicsubstring": "cpp"
+        "stdlib.h": "c",
+        "stdbool.h": "c",
+        "limits": "c",
+        "utility": "c",
+        "xutility": "c",
+        "limits.h": "c"
     }
 }
