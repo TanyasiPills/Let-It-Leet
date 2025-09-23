@@ -44,6 +44,8 @@ char** letterCombinations(char* digits, int* returnSize) {
     current[inputSize] = '\0';
 
     Propegate(current, digits, result, 0, returnSize);
+
+    free(current);
     
     return result;
 }
